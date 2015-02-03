@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//www.marudot.com//iCal Event Maker
+X-WR-CALNAME:Les demi-pixels
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+DTSTAMP:20140914T133216Z
+UID:20140914T133216Z-1190877141@marudot.com
+DTSTART;TZID=Europe/Berlin:20140925T190000
+DTEND;TZID=Europe/Berlin:20140925T233000
+SUMMARY:Les demi-pixels Rennes
+DESCRIPTION:Des demis\, des pixels\, c'est les demi-pixels !
+LOCATION:L'Avant-Scène 69 Boulevard de la Tour d'Auvergne 35000 Rennes
+END:VEVENT
+END:VCALENDAR

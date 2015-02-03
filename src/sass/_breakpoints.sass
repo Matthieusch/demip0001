@@ -1,0 +1,77 @@
+// Big screen : >= 1280px
+// ==================================================
++breakpoint(1280px)
+
+
+// Big screen : >= 960px and < 1280px
+// ==================================================
++breakpoint(960px 1279px)
+
+// Tablet : >= 640px and < 960px
+// ==================================================
++breakpoint(640px 959px)
+
+// Mobile don't show video please : <= 800px
+// ==================================================
++breakpoint(320px 800px)
+  html
+    background: url('../../assets/img/background.jpg') no-repeat center center fixed
+    +background-size(cover)
+    height: 100%
+    overflow: hidden
+  body
+    height: 100%
+    overflow: auto
+  #mega-video
+    display: none
+
+
+// Mobile : < 640px
+// ==================================================
++breakpoint(320px 639px)
+  body
+    border-width: 10px
+    height: auto
+    overflow-y: visible
+  #left,
+  #center,
+  #right
+    width: 100%
+  #left,
+  #right
+    +transform(none !important)
+    float: none
+    margin: 0
+  #center
+    position: relative
+    left: 0
+  .mobile-txt
+    bottom: 20px
+    display: block
+    font-size: 4vw
+    position: absolute
+    text-align: center
+    width: 100%
+  h1
+    font-size: (4.5vw * 4)
+    padding: 0 (2.4vw * 4)
+  h2
+    font-size: (2.4vw * 4)
+    margin-top: (2.4vw * 4)
+  h3, h4
+    +text-shadow(rgba(black, 0.2) (0.2vw * 4) (0.2vw * 4) 0)
+  h3
+    font-size: (4.4vw * 3)
+    margin-top: (4.4vw * 3)
+  h4
+    font-size: (6.3vw * 4)
+  .col
+    &:before
+      height: (6vw * 4)
+      margin: 0 0 (0.5vw * 4) (-4.5vw * 4)
+      width: (9vw * 4)
+  .icon
+    +border-radius((1.5vw * 4))
+    height: (3vw * 4)
+    margin: (2vw * 4) (0.5vw * 4)
+    width: (3vw * 4)

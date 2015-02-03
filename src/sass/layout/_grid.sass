@@ -1,0 +1,35 @@
+// ==================================================
+// Grid system
+// ==================================================
+
+.col
+  +transition(all 0.5s)
+  float: left
+  text-align: center
+  &:before
+    +background-size(cover)
+    background-image: image-url('hermine.png')
+    background-repeat: no-repeat
+    content: ''
+    display: block
+    height: 6vw
+    left: 50%
+    margin: 0 0 0.5vw -4.5vw
+    position: relative
+    width: 9vw
+  &#left:before
+    background-image: image-url('goeland.png')
+
+#center
+  height: 100%
+  left: 35%
+  position: absolute
+  top: 0
+  width: 30%
+
+#left
+  width: 35%
+
+#right
+  margin-left: 30%
+  width: 35%

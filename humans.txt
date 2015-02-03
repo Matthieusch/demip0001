@@ -1,0 +1,25 @@
+/* TEAM */
+
+  Web designer: Matthieu Schneider
+  Twitter: @Matthieusch
+  From: Rennes, Bretagne, France
+
+  Illustrator: Gwenole Jaffredou
+  Twitter: @gweno
+  From: Rennes, Bretagne, France
+
+/* THANKS */
+
+  Web designer: David Colin
+  Twitter: @david_colin
+  From: Rennes, Bretagne, France
+
+  Web designer: Pierre Burel
+  Twitter: @pierreburel
+  From: Rennes, Bretagne, France
+
+/* SITE */
+  Last update:2014/09/14
+  Language: French
+  Doctype:HTML5
+  IDE: Sublime Text, FileZilla, Photoshop

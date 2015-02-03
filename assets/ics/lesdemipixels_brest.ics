@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//www.marudot.com//iCal Event Maker
+X-WR-CALNAME:Les demi-pixels
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+DTSTAMP:20140914T133216Z
+UID:20140914T133216Z-1437333681@marudot.com
+DTSTART;TZID=Europe/Berlin:20140924T190000
+DTEND;TZID=Europe/Berlin:20140924T233000
+SUMMARY:Les demi-pixels Brest
+DESCRIPTION:Des demis\, des pixels\, c'est les demi-pixels !
+LOCATION:Tyr Na Nog 21 Rue de Siam 29200 Brest
+END:VEVENT
+END:VCALENDAR
