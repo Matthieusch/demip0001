@@ -1,3 +1,8 @@
+<?php
+  // INCLUDES
+  include('../inc/config.inc.php');
+  include('../inc/connect.inc.php');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 9]>
     <script>
@@ -106,22 +111,65 @@
                 <div class="mobile-txt">descend cette biere pour voir les infos</div>
             </div>
             <div id="left" class="col">
-                <h1>Brest</h1>
-                <h3>28 Janvier</h3>
-                <h4>18h30</h4>
-                <h2>Blind Piper</h2>
-                <a class="icon ico-marker" title="T'sais pas où c'est ?" href="https://www.google.com/maps/place/BLIND+PIPER/data=!4m2!3m1!1s0x4816b95853732c8b:0xd8c10c5f0a955ce4?gl=FR&amp;hl=fr" target="_blank"></a>
-                <!-- <a class="icon ico-calendar" title="V'là l'event pour te souvenir de la date !" href="http://cestquandlesdemipixels.fr/assets/ics/lesdemipixels_brest.ics"></a> -->
-                <a class="icon ico-twitter" title="T'veux nous suivre ?" href="https://twitter.com/demipixelsbrest" target="_blank"></a>
+              <?php
+                $query = "SELECT *  FROM `informations` WHERE `id` = 'brest' LIMIT 1";
+                $result = mysql_query($query);
+                $row = mysql_fetch_row($result);
+                $city = $row[0];
+                $date = $row[1];
+                $hours = $row[2];
+                $place = $row[3];
+                $location = $row[4];
+                $newsletter = $row[5];
+              ?>
+              <h1><?php print $city; ?></h1>
+              <h3><?php print $date; ?></h3>
+              <?php
+                if(!empty($hours)) {
+                  print '<h4>'.$hours.'</h4>';
+                }
+              ?>
+              <h2><?php print $place; ?></h2>
+              <?php
+                if(!empty($location)) {
+                  print '<a class="icon ico-marker" title="T\'sais pas où c\'est ?" href="'.$location.'" target="_blank"></a>';
+                }
+                if(!empty($newsletter)) {
+                  print '<a class="icon ico-calendar" title="V\'là pour te souvenir de la date !" href="'.$newsletter.'"></a>';
+                }
+              ?>
+              <a class="icon ico-twitter" title="T'veux nous suivre ?" href="https://twitter.com/demipixelsbrest" target="_blank"></a>
             </div>
             <div id="right" class="col">
-                <h1>Rennes</h1>
-                <h3>29 Janvier</h3>
-                <h4>19h</h4>
-                <h2>Hibou Grand Duc</h2>
-                <a class="icon ico-marker" title="T'sais pas où c'est ?" href="https://www.google.com/maps/place/Hibou+Grand+Duc/@48.109288,-1.672588,17z/data=!3m1!4b1!4m2!3m1!1s0x480ede4ae6283e5f:0xe95ec23c65f236a6?hl=fr" target="_blank"></a>
-                <!--<a class="icon ico-calendar" title="V'là l'event pour te souvenir de la date !" href="http://cestquandlesdemipixels.fr/assets/ics/lesdemipixels_rennes.ics"></a>-->
-                <a class="icon ico-twitter" title="T'veux nous suivre ?" href="https://twitter.com/lesdemipixels" target="_blank"></a>
+              <?php
+                $query = "SELECT *  FROM `informations` WHERE `id` = 'rennes' LIMIT 1";
+                $result = mysql_query($query);
+                $row = mysql_fetch_row($result);
+                $city = $row[0];
+                $date = $row[1];
+                $hours = $row[2];
+                $place = $row[3];
+                $location = $row[4];
+                $newsletter = $row[5];
+                mysql_close();
+              ?>
+              <h1><?php print $city; ?></h1>
+              <h3><?php print $date; ?></h3>
+              <?php
+                if(!empty($hours)) {
+                  print '<h4>'.$hours.'</h4>';
+                }
+              ?>
+              <h2><?php print $place; ?></h2>
+              <?php
+                if(!empty($location)) {
+                  print '<a class="icon ico-marker" title="T\'sais pas où c\'est ?" href="'.$location.'" target="_blank"></a>';
+                }
+                if(!empty($newsletter)) {
+                  print '<a class="icon ico-calendar" title="V\'là pour te souvenir de la date !" href="'.$newsletter.'"></a>';
+                }
+              ?>
+              <a class="icon ico-twitter" title="T'veux nous suivre ?" href="https://twitter.com/lesdemipixels" target="_blank"></a>
             </div>
         </div>
     </div>

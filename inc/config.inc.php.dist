@@ -1,0 +1,7 @@
+<?php
+  // SQL CUSTOM
+  $config['sql']['host'] = 'localhost';
+  $config['sql']['user'] = 'user';
+  $config['sql']['password'] = 'password';
+  $config['sql']['database'] = 'db';
+?>
