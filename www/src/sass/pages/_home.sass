@@ -36,3 +36,97 @@ video
   &.ico-twitter
     background-color: map-get($colours, auburn)
     background-image: image-url('icon-twitter.png')
+
+#what
+  @extend %Norwester
+  +transition-property(color)
+  +transition-duration(0.25s)
+  +transition-timing-function(ease-in-out)
+  background: transparent
+  border: 0 none
+  bottom: 20px
+  cursor: pointer
+  font-size: 1.25vw
+  left: 0
+  line-height: 1.5vw
+  padding: 0
+  position: absolute
+  text-align: center
+  width: 100%
+  &:hover, &:focus, &:visited, &:active
+    color: map-get($colours, auburn)
+
+#lightbox-bg
+  +opacity(0)
+  +transition-property(min-height opacity)
+  +transition-duration(0.25s)
+  +transition-timing-function(ease-in-out)
+  background: #000
+  bottom: 0
+  height: auto
+  min-width: 100%
+  min-height: 0
+  position: fixed
+  right: 0
+  width: auto
+  &.show
+    +opacity(0.5)
+    min-height: 100%
+
+article
+  +border-radius(2.5vw)
+  +opacity(0)
+  +transform(translate3d(0, -90%, 0))
+  +transition-property(opacity transform)
+  +transition-duration(0.5s)
+  +transition-timing-function(ease-in-out)
+  background: map-get($colours, light-brown)
+  left: 20%
+  padding: 2.5vw
+  position: absolute
+  text-align: center
+  top: 0
+  width: 60%
+  &.open
+    +opacity(1)
+    +transform(translate3d(0, 11vw, 0))
+  h1
+    font-size: 2.3vw
+    border: 0 none
+    padding: 0
+    &:after
+      border-top: 3px dotted map-get($colours, brown)
+      content: ""
+      display: block
+      margin: 2.3vw 0 2.5vw 35%
+      width: 30%
+  p
+    color: #7e705b
+    font-family: georgia, times, serif
+    font-size: 1vw
+    font-style: italic
+    line-height: 1.5vw
+    margin-top: 2.3vw
+  strong
+    font-weight: bold
+  a
+    color: map-get($colours, auburn)
+    text-decoration: none
+    &:hover, &:focus, &:visited, &:active
+      text-decoration: underline
+  button
+    @extend %Norwester
+    +border-radius(5vw)
+    +transition-property(background)
+    +transition-duration(0.25s)
+    +transition-timing-function(ease-in-out)
+    background: map-get($colours, auburn)
+    border: 0 none
+    color: map-get($colours, light-brown)
+    cursor: pointer
+    font-size: 1.25vw
+    margin-top: 2.5vw
+    padding: 0.7vw 1.2vw
+    &:hover, &:focus, &:visited, &:active
+      background: map-get($colours, brown)
+

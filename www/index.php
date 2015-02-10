@@ -109,6 +109,7 @@
             <div id="center">
                 <img id="bottle" src="assets/img/bottle.png" width="29%" height="100%" alt="C'est quand les demi-pixels ?" />
                 <div class="mobile-txt">descend cette biere pour voir les infos</div>
+                <button id="what">mais c’est quoi,<br/>les demi-pixels?</button>
             </div>
             <div id="left" class="col">
               <?php
@@ -120,7 +121,7 @@
                 $hours = $row[2];
                 $place = $row[3];
                 $location = $row[4];
-                $newsletter = $row[5];
+                $newsletter_brest = $row[5];
               ?>
               <h1><?php print $city; ?></h1>
               <h3><?php print $date; ?></h3>
@@ -134,8 +135,8 @@
                 if(!empty($location)) {
                   print '<a class="icon ico-marker" title="T\'sais pas où c\'est ?" href="'.$location.'" target="_blank"></a>';
                 }
-                if(!empty($newsletter)) {
-                  print '<a class="icon ico-calendar" title="V\'là pour te souvenir de la date !" href="'.$newsletter.'"></a>';
+                if(!empty($newsletter_brest)) {
+                  print '<a class="icon ico-calendar" title="V\'là pour te souvenir de la date !" href="'.$newsletter_brest.'"></a>';
                 }
               ?>
               <a class="icon ico-twitter" title="T'veux nous suivre ?" href="https://twitter.com/demipixelsbrest" target="_blank"></a>
@@ -150,7 +151,7 @@
                 $hours = $row[2];
                 $place = $row[3];
                 $location = $row[4];
-                $newsletter = $row[5];
+                $newsletter_rennes = $row[5];
                 mysql_close();
               ?>
               <h1><?php print $city; ?></h1>
@@ -165,13 +166,43 @@
                 if(!empty($location)) {
                   print '<a class="icon ico-marker" title="T\'sais pas où c\'est ?" href="'.$location.'" target="_blank"></a>';
                 }
-                if(!empty($newsletter)) {
-                  print '<a class="icon ico-calendar" title="V\'là pour te souvenir de la date !" href="'.$newsletter.'"></a>';
+                if(!empty($newsletter_rennes)) {
+                  print '<a class="icon ico-calendar" title="V\'là pour te souvenir de la date !" href="'.$newsletter_rennes.'"></a>';
                 }
               ?>
               <a class="icon ico-twitter" title="T'veux nous suivre ?" href="https://twitter.com/lesdemipixels" target="_blank"></a>
             </div>
         </div>
+        <div id="lightbox-bg"></div>
+        <article>
+          <h1>mais c’est quoi, les demi-pixels ?</h1>
+          <p>
+            C’est un rassemblement sous forme d’afterworks,<br />
+            de passionné•e•s du web, du graphisme<br />
+            et du digital en général
+          </p>
+          <p>
+            Le concept est simple : se retrouver chaque mois après le travail pour parler du web autour d’un verre
+          </p>
+          <p>
+            Nous sommes présents sur Rennes depuis 2012<br />
+            et sur Brest depuis 2014
+          </p>
+          <p>
+            N’hésitez pas à suivre nos comptes Twitter pour plus d’informations :<br />
+            <a title="T'veux nous suivre ?" href="https://twitter.com/lesdemipixels" target="_blank">@lesdemipixels</a> (Rennes) et <a title="T'veux nous suivre ?" href="https://twitter.com/demipixelsbrest" target="_blank">@demipixelsbrest</a> (Brest)
+          </p>
+          <?php
+            if(!empty($newsletter_rennes) && !empty($newsletter_brest)) {
+              print '<p>Inscrivez-vous à notre newsletter pour connaître la date et le lieu du prochain rendez-vous :<br />';
+              print '<a title="V\'là pour te souvenir de la date !" href="'.$newsletter_rennes.'">newsletter de Rennes</a>, <a title="V\'là pour te souvenir de la date !" href="'.$newsletter_brest.'">newsletter de Brest</a>';
+            }
+          ?>
+          <p>
+            <strong>Et surtout, ne soyez pas timide, venez nous voir !</strong>
+          </p>
+          <button id="close-what">ok j'ai compris</button>
+        </article>
     </div>
   </body>
 </html>

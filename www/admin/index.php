@@ -6,10 +6,21 @@
   include('../../inc/connect.inc.php');
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <title>Administration</title>
+  <title>Administration - C'est quand les demi-pixels ?</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Apple mobile status bar -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="C'est quand les demi-pixels ?">
+
+  <meta name="robots" CONTENT="noindex, nofollow">
+
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
 
   <style type="text/css">

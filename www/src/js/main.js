@@ -22,6 +22,7 @@ var app = {
     $ = self.jQuery;
 
     // human.log
+    if (!window.console) console = {log: function() {}};
     console.log('%cJavaScript informations\nversion: '+self.version + '\njQuery: '+self.jQueryVersion + '\nlang: '+self.lang + '\nauthor : Matthieu Schneider', 'color: #ae81bc');
 
     // Calculate time to load DOMready and everything loaded
