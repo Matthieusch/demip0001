@@ -74,7 +74,7 @@ video
     min-height: 100%
 
 article
-  +border-radius(2.5vw)
+  +border-radius(2.5vh)
   +opacity(0)
   +transform(translate3d(0, -90%, 0))
   +transition-property(opacity transform)
@@ -82,31 +82,31 @@ article
   +transition-timing-function(ease-in-out)
   background: map-get($colours, light-brown)
   left: 20%
-  padding: 2.5vw
+  padding: 2.5vh
   position: absolute
   text-align: center
   top: 0
   width: 60%
   &.open
     +opacity(1)
-    +transform(translate3d(0, 11vw, 0))
+    +transform(translate3d(0, 17vh, 0))
   h1
-    font-size: 2.3vw
+    font-size: 4vh
     border: 0 none
     padding: 0
     &:after
       border-top: 3px dotted map-get($colours, brown)
       content: ""
       display: block
-      margin: 2.3vw 0 2.5vw 35%
+      margin: 4vh 0 4vh 35%
       width: 30%
   p
     color: #7e705b
     font-family: georgia, times, serif
-    font-size: 1vw
+    font-size: 1.75vh
     font-style: italic
-    line-height: 1.5vw
-    margin-top: 2.3vw
+    line-height: 2.5vh
+    margin-top: 4vh
   strong
     font-weight: bold
   a
@@ -116,7 +116,7 @@ article
       text-decoration: underline
   button
     @extend %Norwester
-    +border-radius(5vw)
+    +border-radius(7.25vh)
     +transition-property(background)
     +transition-duration(0.25s)
     +transition-timing-function(ease-in-out)
@@ -124,9 +124,9 @@ article
     border: 0 none
     color: map-get($colours, light-brown)
     cursor: pointer
-    font-size: 1.25vw
-    margin-top: 2.5vw
-    padding: 0.7vw 1.2vw
+    font-size: 2vh
+    margin-top: 4vh
+    padding: 1vh 2vh
     &:hover, &:focus, &:visited, &:active
       background: map-get($colours, brown)
 

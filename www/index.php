@@ -178,7 +178,7 @@
           <h1>mais c’est quoi, les demi-pixels ?</h1>
           <p>
             C’est un rassemblement sous forme d’afterworks,<br />
-            de passionné•e•s du web, du graphisme<br />
+            de passionné-e-s du web, du graphisme<br />
             et du digital en général
           </p>
           <p>
