@@ -114,8 +114,8 @@
             <div id="left" class="col">
               <?php
                 $query = "SELECT *  FROM `informations` WHERE `id` = 'brest' LIMIT 1";
-                $result = mysql_query($query);
-                $row = mysql_fetch_row($result);
+                $result = mysqli_query($sql_connect, $query);
+                $row = mysqli_fetch_row($result);
                 $city = $row[0];
                 $date = $row[1];
                 $hours = $row[2];
@@ -144,15 +144,15 @@
             <div id="right" class="col">
               <?php
                 $query = "SELECT *  FROM `informations` WHERE `id` = 'rennes' LIMIT 1";
-                $result = mysql_query($query);
-                $row = mysql_fetch_row($result);
+                $result = mysqli_query($sql_connect, $query);
+                $row = mysqli_fetch_row($result);
                 $city = $row[0];
                 $date = $row[1];
                 $hours = $row[2];
                 $place = $row[3];
                 $location = $row[4];
                 $newsletter_rennes = $row[5];
-                mysql_close();
+                mysqli_close($sql_connect);
               ?>
               <h1><?php print $city; ?></h1>
               <h3><?php print $date; ?></h3>

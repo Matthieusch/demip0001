@@ -13,7 +13,7 @@
   $newsletter = isset($_POST['newsletter']) ? $_POST['newsletter'] : '';
 
   $query = 'UPDATE informations SET date = "'.$date.'", hours = "'.$hours.'", location = "'.$location.'", googlemap = "'.$googlemap.'", newsletter = "'.$newsletter.'" WHERE id = "'.$id.'"';
-  mysql_query($query, $sql_connect) or die(mysql_error());
+  mysqli_query($sql_connect, $query) or die(mysql_error());
   $_SESSION[$id.'_form'] = 'Yeah bitch !';
   header("Location: index.php");
   exit;

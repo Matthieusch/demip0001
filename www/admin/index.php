@@ -74,8 +74,8 @@
           <form action="update.php" method="post">
             <?php
               $query = "SELECT *  FROM `informations` WHERE `id` = 'brest' LIMIT 1";
-              $result = mysql_query($query);
-              $row = mysql_fetch_row ($result);
+              $result = mysqli_query($sql_connect, $query);
+              $row = mysqli_fetch_row($result);
             ?>
             <div class="form-group">
               <label for="brestDate">Date :</label>
@@ -118,9 +118,9 @@
           <form action="update.php" method="post">
           <?php
             $query = "SELECT *  FROM `informations` WHERE `id` = 'rennes' LIMIT 1";
-            $result = mysql_query($query);
-            $row = mysql_fetch_row ($result);
-            mysql_close();
+            $result = mysqli_query($sql_connect, $query);
+            $row = mysqli_fetch_row($result);
+            mysqli_close($sql_connect);
           ?>
             <div class="form-group">
               <label for="rennesDate">Date :</label>

@@ -14,15 +14,15 @@
     //Lets search the databse for the user name and password
     //Choose some sort of password encryption, I choose sha256
     //Password function (Not In all versions of MySQL).
-    $usr = mysql_real_escape_string($_POST['username']);
-    $pas = hash('sha256', mysql_real_escape_string($_POST['password']));
-    $sql = mysql_query("SELECT * FROM user
+    $usr = mysqli_real_escape_string($sql_connect, $_POST['username']);
+    $pas = hash('sha256', mysqli_real_escape_string($sql_connect, $_POST['password']));
+    $sql = mysqli_query($sql_connect, "SELECT * FROM user
       WHERE username='$usr' AND
       password='$pas'
       LIMIT 1");
 
-    if(mysql_num_rows($sql) == 1){
-      $row = mysql_fetch_array($sql);
+    if(mysqli_num_rows($sql) == 1){
+      $row = mysqli_fetch_array($sql);
       session_start();
       $_SESSION['error'] = '';
       $_SESSION['username'] = $row['username'];

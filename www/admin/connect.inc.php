@@ -1,8 +1,12 @@
 <?php
-  // CONNECT PORTAL BDD
-  // $sql_connect_portal = mysql_connect($config['sql']['portal']['host'], $config['sql']['portal']['user'], $config['sql']['portal']['password']) or mysql_error();
-  // mysql_select_db($config['sql']['portal']['database'], $sql_connect_portal);
-  // CONNECT CUSTOM BDD
-  $sql_connect_custom = mysql_connect($config['sql']['custom']['host'], $config['sql']['custom']['user'], $config['sql']['custom']['password']) or mysql_error();
-  mysql_select_db($config['sql']['custom']['database'], $sql_connect_custom);
+  // CONNECT BDD
+  $sql_connect = mysqli_connect($config['sql']['host'], $config['sql']['user'], $config['sql']['password']);
+
+  // Vérification de la connexion
+  if (mysqli_connect_errno()) {
+    printf("Échec de la connexion : %s\n", mysqli_connect_error());
+    exit();
+  }
+
+  mysqli_select_db($sql_connect, $config['sql']['database']);
 ?>
