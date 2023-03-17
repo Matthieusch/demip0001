@@ -38,7 +38,7 @@
 -->
     <title>C'est quand les demi-pixels ?</title>
 
-    <base href="http://cestquandlesdemipixels.fr/">
+    <base href="https://cestquandlesdemipixels.fr/">
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,16 +51,16 @@
 
     <!-- SEO -->
     <meta name="description" content="Les demi-pixels sont des afterworks pixelisés sur Brest et Rennes, rassemblant les amoureux des pixels une fois par mois juste avant la nidification des pixels.">
-    <link rel="canonical" href="http://cestquandlesdemipixels.fr/">
-    <link rel="shortlink" href="http://cestquandlesdemipixels.fr/">
+    <link rel="canonical" href="https://cestquandlesdemipixels.fr/">
+    <link rel="shortlink" href="https://cestquandlesdemipixels.fr/">
 
     <!-- Humans -->
-    <link type="text/plain" rel="author" href="http://cestquandlesdemipixels.fr/humans.txt">
+    <link type="text/plain" rel="author" href="https://cestquandlesdemipixels.fr/humans.txt">
 
     <!-- Facebook -->
     <meta property="og:site_name" content="C'est quand les demi-pixels ?">
-    <meta property="og:image" content="http://cestquandlesdemipixels.fr/assets/img/favicons/favicon-196x196.png">
-    <meta property="og:url" content="http://cestquandlesdemipixels.fr">
+    <meta property="og:image" content="https://cestquandlesdemipixels.fr/assets/img/favicons/favicon-196x196.png">
+    <meta property="og:url" content="https://cestquandlesdemipixels.fr">
     <meta property="og:type" content="website">
     <meta property="og:title" content="C'est quand les demi-pixels ?">
 
